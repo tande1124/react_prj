@@ -1,0 +1,54 @@
+.agent-content-view {
+  height: 100%;
+  .agent-section {
+    height: calc(~'100% - 48px');
+    display: flex;
+    border-style: solid;
+    border-width: 0 2px 2px 2px;
+    border-color: #000;
+    .list-view {
+      width: 70%;
+      border-right: 2px solid #000;
+    }
+    .list-history {
+      flex: 1;
+      padding: 20px;
+      .agent-summary-view {
+        margin-bottom: 20px;
+        .summary-info {
+          padding: 4px;
+          font-size: 16px;
+          .info-label {
+            display: inline-block;
+            width: 50%;
+            font-weight: 500;
+          }
+        }
+      }
+      .agent-history-view {
+        height: calc(~'100% - 126px');
+        .history-content {
+          height: calc(~'100% - 42px');
+          overflow: auto;
+          .info {
+            font-size: 16px;
+            font-weight: 500;
+            .info-title {
+              display: inline-block;
+              width: 33%;
+              padding: 4px;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+          }
+        }
+      }
+      .history-header {
+        font-size: 24px;
+        padding: 0 0 4px 4px;
+        border-bottom: 2px solid #ccc;
+      }
+    }
+  }
+}

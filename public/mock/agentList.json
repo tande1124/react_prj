@@ -1,0 +1,40 @@
+[
+  {
+    "id": "001",
+    "title": "bjstdmngbgr02.thoughtworks.com",
+    "type": "physical",
+    "ip": "192.168.1.2",
+    "path": "/var/lib/cruise-agent",
+    "resources": ["ubuntu", "firefox3", "core-duo"],
+    "creator": "Deny",
+    "status": 1
+  },
+  {
+    "id": "002",
+    "title": "bjstdmngbgr03.thoughtworks.com",
+    "type": "virtual",
+    "ip": "192.168.1.3",
+    "path": "/var/lib/cruise-agent",
+    "resources": ["ubuntu", "firefox3", "mysql", "core-duo"],
+    "status": 0
+  },
+  {
+    "id": "003",
+    "title": "bjstdmngbgr04.thoughtworks.com",
+    "type": "virtual",
+    "ip": "192.168.1.4",
+    "path": "/var/lib/cruise-agent",
+    "resources": ["ubuntu", "firefox3", "mysql", "core-duo"],
+    "status": 0
+  },
+  {
+    "id": "004",
+    "title": "bjstdmngbgr05.thoughtworks.com",
+    "type": "physical",
+    "ip": "192.168.1.5",
+    "path": "/var/lib/cruise-agent",
+    "resources": ["ubuntu", "firefox3", "core-duo"],
+    "creator": "Deny",
+    "status": 1
+  }
+]

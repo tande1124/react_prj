@@ -1,0 +1,178 @@
+.agent-card {
+  display: flex;
+  align-items: center;
+  position: relative;
+  min-height: 60px;
+  padding: 5px;
+  margin: 20px;
+  border-radius: 10px;
+  &.idle {
+    background: yellowgreen;
+  }
+  &.building {
+    background: limegreen;
+  }
+  .devider {
+    color: #666;
+    margin: 0 4px;
+    font-weight: normal;
+  }
+  .card--image {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    margin: auto 15px;
+    border-radius: 50%;
+    background: #666;
+  }
+  .card-content {
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+    .card-message {
+      font-size: 16px;
+      font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      .card-title {
+        padding-right: 20px;
+      }
+      .card-info {
+        .info-item {
+          padding: 0 4px;
+        }
+      }
+    }
+
+    .card-resouce {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      .list-add-delete {
+        font-size: 14px;
+        display: flex;
+        flex: 1;
+        align-items: center;
+        .add-btn {
+          background: transparent;
+          border: none;
+          cursor: pointer;
+          span {
+            text-decoration: underline;
+          }
+        }
+        .resource-list-container {
+          display: flex;
+          flex: 1;
+          align-items: center;
+        }
+        .resource-list {
+          display: flex;
+          flex-wrap: wrap;
+          margin-left: 4px;
+          padding-right: 100px;
+          margin-bottom: 0;
+          .resource-item {
+            margin-right: 16px;
+          }
+          .delete-item {
+            position: relative;
+            top: 4px;
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            background: transparent;
+            margin-left: 3px;
+            color: rgb(117, 114, 114);
+            border: 2px solid rgb(117, 114, 114);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 10px;
+            cursor: pointer;
+            &::before, &::after {
+              content: '';
+              display: block;
+              width: 2px;
+              height: 12px;
+              position: absolute;
+              top:-1px;
+              left: 4px;
+              background: rgb(117, 114, 114);
+            }
+            &::before {
+              transform: rotate(45deg);
+            }
+            &::after {
+              transform: rotate(-45deg);
+            }
+          }
+        }
+      }
+    }
+    .info-reator {
+      position: absolute;
+      right: 16px;
+      bottom: 2px;
+      font-size: 18px;
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        top: 4px;
+        display: block;
+        height: 18px;
+      }
+      &::before {
+        left: -22px;
+        width: 18px;
+        border-radius: 50%;
+        border: 2px solid #000;
+      }
+      &::after {
+        left: -14px;
+        border-right: 2px solid #000;
+        transform: rotate(45deg);
+      }
+    }
+  }
+  .add-modal {
+    display: none;
+    position: absolute;
+    top: 48px;
+    left: 80px;
+    width: 500px;
+    z-index: 1;
+    border: 2px solid #000;
+    padding: 10px;
+    background: rgb(202, 212, 194);
+    margin-top: 20px;
+    border-radius: 8px;
+    &.add-active {
+      display: block;
+    }
+    .modal-icon {
+      position: absolute;
+      top: -12px;
+      left: 20px;
+      width: 20px;
+      height: 20px;
+      border-top: 2px solid #000;
+      border-right: 2px solid #000;
+      border-left: none;
+      border-bottom: none;
+      transform: rotate(-45deg);
+      background: rgb(202, 212, 194);
+    }
+    .add-submit {
+      padding-top: 12px;
+      .ant-btn {
+        border-radius: 16px;
+        margin-right: 12px;
+      }
+    }
+    .add-input {
+      width: 100%;
+    }
+  }
+}
